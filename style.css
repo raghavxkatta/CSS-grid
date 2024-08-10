@@ -1,0 +1,28 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+    border: 2px solid yellow;
+    display:grid;
+    grid-template-columns: [pehla]120px [second]100px ;/* this means that the first column occupies 120 px and the second column occupies 100px */
+    grid-template-rows:100px 100px 100px;/* because this has three rows it will divide the elements accordingly */
+}
+.item{
+    border:2px solid red;
+    height:55px;
+    width:55px;
+}
+/* so like waise toh grid automatically place kardeta hai but if you want you can place items as per your wish */
+.item-4{
+    grid-row:1/2;/* this basically means that item-4 will start from row1 and end at the start of row 2 which basically means that it will occupy the whole of row 1 */
+    grid-column:pehle/second;/* we have given the colum lines names, it is not necessary but it's an additional feature */
+}
+.item-1{
+    grid-row:1/2;
+    /* or you can do */
+    /* grid-row-start:1 */
+    /* grid-row-end:2 */
+    grid-column:1/2;
+}
